@@ -8,6 +8,7 @@
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com)
 [![WebSocket](https://img.shields.io/badge/WebSocket-Real--time-ff6600?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 **AI-Powered Browser Automation & QA Testing Platform**
 
@@ -476,31 +477,39 @@ We welcome contributions from the community! Here's how you can help:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License - see the [LICENSE](LICENSE) file for details.
+
+### License Summary
+
+- ✅ **Personal Use**: Use for personal projects and learning
+- ✅ **Educational Use**: Use in educational institutions
+- ✅ **Research**: Use for academic and research purposes
+- ✅ **Modification**: Modify and adapt the code
+- ✅ **Sharing**: Share with others under the same license
+- ❌ **Commercial Use**: Cannot be used for commercial purposes
+- ⚠️ **Attribution**: Must credit the original authors
 
 ```
-MIT License
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 
 Copyright (c) 2024 Matrix QA Test Runner
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, 
+  and indicate if changes were made.
+- NonCommercial — You may not use the material for commercial purposes.
+- ShareAlike — If you remix, transform, or build upon the material, you must 
+  distribute your contributions under the same license as the original.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+No additional restrictions — You may not apply legal terms or technological 
+measures that legally restrict others from doing anything the license permits.
 ```
+
+For commercial licensing options, please contact the project maintainers.
 
 ---
 
