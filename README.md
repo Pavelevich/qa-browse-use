@@ -2,6 +2,17 @@
 
 <div align="center">
 
+<!-- Logo placeholder - Replace with your hosted logo -->
+<img src="https://raw.githubusercontent.com/yourusername/qa-remote-browser/main/frontend/assets/matrix-qa-logo.png" alt="Matrix QA Test Runner Logo" width="200" height="200">
+
+<!-- Alternative: Use a simple text-based logo -->
+<!--
+<div style="font-family: 'Courier New', monospace; color: #00ff00; font-size: 24px; font-weight: bold; background: #000; padding: 20px; border-radius: 10px;">
+🧠⚡ MATRIX QA<br/>
+&nbsp;&nbsp;&nbsp;TEST RUNNER
+</div>
+-->
+
 ![Matrix QA Test Runner](https://img.shields.io/badge/Matrix-QA%20Test%20Runner-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00)
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
@@ -23,7 +34,9 @@
 
 ## 🚀 Overview
 
-Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to revolutionize quality assurance and security testing workflows. Built with a Matrix-themed interface, it combines the power of multiple AI providers with browser automation to deliver comprehensive, intelligent testing solutions including advanced security vulnerability assessments.
+Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to revolutionize quality assurance and security testing workflows. Built with a Matrix-themed interface, it combines the power of multiple AI providers with intelligent browser automation to deliver comprehensive testing solutions including advanced security vulnerability assessments.
+
+**Powered by [Browser-Use](https://browser-use.com/)** - The platform leverages the browser-use agent technology as its core automation engine, integrated seamlessly into the backend with custom modifications to store execution results and screenshots directly in MongoDB for comprehensive test tracking and analysis.
 
 ### 🎯 Key Highlights
 
@@ -84,6 +97,13 @@ Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to
 - **Security Test Management**: Custom test definitions and modifications
 - **User Management**: Admin panel for user creation and management
 
+### 🤖 **Browser-Use Integration**
+- **Core Automation Engine**: Built on [Browser-Use](https://browser-use.com/) technology
+- **MongoDB Integration**: Custom modifications to store execution results in database
+- **Real-time Updates**: Enhanced WebSocket communication for live test monitoring
+- **Screenshot Persistence**: Automatic capture and storage of browser screenshots
+- **Multi-AI Support**: Compatible with multiple AI providers through Browser-Use framework
+
 ---
 
 ## 🛠️ Installation
@@ -112,7 +132,7 @@ Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to
 
 3. **Install Browser Dependencies**
    ```bash
-   # Install browser-use package (modified version included)
+   # Install browser-use package (modified version included for MongoDB integration)
    cd browser_use_mod/browser-use
    pip install -e .
    cd ../..
@@ -531,11 +551,14 @@ const screenshotSocket = new WebSocket('ws://localhost:8000/ws/screenshot/{sessi
 ### Backend Components
 
 - **FastAPI**: RESTful API and WebSocket server
+- **[Browser-Use Agent](https://browser-use.com/)**: Core AI-powered browser automation engine (modified version)
+  - Custom integration with MongoDB for result persistence
+  - Enhanced screenshot capture and storage capabilities  
+  - Real-time execution tracking and WebSocket communication
 - **MongoDB**: Document storage for users, history, and videos
 - **Motor**: Async MongoDB driver
 - **JWT**: Token-based authentication
 - **Cryptography**: API key encryption
-- **Browser-use**: AI-powered browser automation
 - **Security Testing Engine**: Vulnerability assessment framework
 - **FFmpeg**: Video processing (optional)
 
@@ -727,11 +750,11 @@ The developers of this tool are not responsible for any misuse or damage caused 
 
 ## 🙏 Acknowledgments
 
-- **[Browser-use](https://github.com/browser-use/browser-use)**: Foundation for AI-powered browser automation
-- **[WarmShao](https://github.com/WarmShao)**: Contributor to the browser-use project
-- **FastAPI Community**: For the excellent web framework
-- **OWASP**: For security testing methodologies and best practices
-- **Matrix Franchise**: Inspiration for the iconic green-on-black aesthetic
+- **[Browser-Use](https://browser-use.com/)** by **[WarmShao](https://github.com/WarmShao)**: The core AI-powered browser automation technology that makes this platform possible. Our implementation includes custom modifications for MongoDB integration and enhanced result tracking.
+- **FastAPI Community**: For the excellent async web framework that powers our backend
+- **OWASP**: For security testing methodologies and vulnerability assessment best practices
+- **Matrix Franchise**: Inspiration for the iconic green-on-black aesthetic and "digital rain" theme
+- **MongoDB Team**: For the robust document database that stores our execution results and user data
 
 ---
 
@@ -744,11 +767,46 @@ The developers of this tool are not responsible for any misuse or damage caused 
 
 ---
 
+## 📝 Logo Integration
+
+To add your custom Matrix QA Test Runner logo to this README:
+
+### Option 1: Host Logo on GitHub
+1. Create a `frontend/assets/` directory in your repository
+2. Add your logo file (e.g., `matrix-qa-logo.png`)
+3. Update the image source in the README:
+   ```markdown
+   <img src="https://raw.githubusercontent.com/yourusername/qa-remote-browser/main/frontend/assets/matrix-qa-logo.png" alt="Matrix QA Test Runner Logo" width="200" height="200">
+   ```
+
+### Option 2: Use External Image Hosting
+- Upload to services like Imgur, GitHub Assets, or your own CDN
+- Replace the `src` URL with your hosted image URL
+
+### Option 3: Text-Based Logo (No external files needed)
+```html
+<div align="center" style="font-family: 'Courier New', monospace; color: #00ff00; background: #000; padding: 20px; border-radius: 10px;">
+<pre>
+ ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗
+ ████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝
+ ██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝ 
+ ██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗ 
+ ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗
+ ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
+              QA TEST RUNNER
+</pre>
+</div>
+```
+
+---
+
 <div align="center">
 
 **Made with ❤️ for the QA and Security Community**
 
 *Follow the white rabbit... into automated testing and security excellence.*
+
+**Powered by [Browser-Use](https://browser-use.com/) 🤖**
 
 [![Stars](https://img.shields.io/github/stars/yourusername/qa-remote-browser?style=social)](https://github.com/yourusername/qa-remote-browser/stargazers)
 [![Forks](https://img.shields.io/github/forks/yourusername/qa-remote-browser?style=social)](https://github.com/yourusername/qa-remote-browser/network/members)
