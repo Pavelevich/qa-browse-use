@@ -8,13 +8,14 @@
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com)
 [![WebSocket](https://img.shields.io/badge/WebSocket-Real--time-ff6600?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+[![Security](https://img.shields.io/badge/Security-Testing-ff0000?style=for-the-badge&logo=shield&logoColor=white)](https://owasp.org)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**AI-Powered Browser Automation & QA Testing Platform**
+**AI-Powered Browser Automation, QA Testing & Security Assessment Platform**
 
-*Harness the power of multiple AI providers to automate web testing with real-time monitoring and comprehensive reporting.*
+*Harness the power of multiple AI providers to automate web testing and security assessments with real-time monitoring and comprehensive reporting.*
 
-[Features](#features) • [Installation](#installation) • [Configuration](#configuration) • [Usage](#usage) • [API](#api-documentation) • [Contributing](#contributing)
+[Features](#features) • [Installation](#installation) • [Configuration](#configuration) • [Usage](#usage) • [Security Testing](#security-testing) • [API](#api-documentation) • [Contributing](#contributing)
 
 </div>
 
@@ -22,11 +23,12 @@
 
 ## 🚀 Overview
 
-Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to revolutionize quality assurance workflows. Built with a Matrix-themed interface, it combines the power of multiple AI providers with browser automation to deliver comprehensive, intelligent testing solutions.
+Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to revolutionize quality assurance and security testing workflows. Built with a Matrix-themed interface, it combines the power of multiple AI providers with browser automation to deliver comprehensive, intelligent testing solutions including advanced security vulnerability assessments.
 
 ### 🎯 Key Highlights
 
 - **Multi-AI Integration**: Support for Claude, GPT, DeepSeek, and more
+- **Security Testing Suite**: 100+ predefined security tests for web vulnerabilities
 - **Real-time Monitoring**: Live browser screenshots and execution tracking
 - **JIRA Integration**: Seamless ticket management and automation
 - **Video Recording**: Capture test executions for analysis
@@ -41,6 +43,19 @@ Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to
 - **Intelligent Test Generation**: Natural language instructions converted to automated actions
 - **Smart Error Handling**: AI-driven debugging and recovery mechanisms
 
+### 🛡️ **Security Testing Suite**
+- **100+ Security Tests**: Comprehensive vulnerability assessments including:
+  - **SQL Injection Testing**: Database injection vulnerability detection
+  - **Cross-Site Scripting (XSS)**: Reflected, stored, and DOM-based XSS testing
+  - **CSRF Token Validation**: Cross-Site Request Forgery protection testing
+  - **Authentication & Session Management**: Login security and session handling
+  - **Directory Traversal**: Path traversal and file inclusion vulnerabilities
+  - **Clickjacking Testing**: Frame protection and UI redressing attacks
+- **Severity Classification**: High, Medium, Low risk categorization
+- **Target URL Configuration**: Dynamic target specification for security assessments
+- **Category Filtering**: Organized by vulnerability types and testing methods
+- **One-Click Execution**: Automated security test deployment
+
 ### 🖥️ **Real-time Monitoring**
 - **Live Screenshots**: WebSocket-powered real-time browser viewing
 - **Video Recording**: MP4/GIF capture of test executions with FFmpeg support
@@ -54,16 +69,19 @@ Matrix QA Test Runner is a cutting-edge, AI-powered testing platform designed to
 ### 📊 **Comprehensive Reporting**
 - **Execution History**: Detailed test run archives with searchable metadata
 - **Video Attachments**: Link recordings to specific test executions
+- **Security Reports**: Vulnerability assessment results and recommendations
 - **Export Capabilities**: Download results and videos for offline analysis
 
 ### 🎫 **JIRA Integration**
 - **Ticket Automation**: Execute tests directly from JIRA tickets
 - **Label-based Filtering**: Automatic detection of automation-ready tickets
+- **Security Issue Tracking**: Link security findings to JIRA issues
 - **Seamless Workflow**: Bridge between issue tracking and test execution
 
 ### ⚙️ **Advanced Configuration**
 - **Video Settings**: Configurable resolution, quality, and frame rates
 - **API Configuration**: Per-model API key management
+- **Security Test Management**: Custom test definitions and modifications
 - **User Management**: Admin panel for user creation and management
 
 ---
@@ -172,6 +190,23 @@ API_KEY=qa_secret_key
    mongosh mongodb://localhost:27017/matrix_qa
    ```
 
+### Security Tests Configuration
+
+Security tests can be configured in JSON files within the `backend/hacking/` directory. Each test should follow this structure:
+
+```json
+{
+  "key": "HACK-XXX",
+  "summary": "Test Name",
+  "description": "Brief description of the test",
+  "category": "Vulnerability Category",
+  "severity": "High|Medium|Low",
+  "testing_type": "Type of Assessment",
+  "target": "Target System/Component",
+  "instructions": "Detailed testing instructions..."
+}
+```
+
 ### JIRA Integration Setup
 
 1. **Generate API Token**
@@ -250,6 +285,84 @@ DEEPSEEK_API_KEY=your-deepseek-key-here
 
 ---
 
+## 🛡️ Security Testing
+
+### Overview
+
+The Matrix QA Test Runner includes a comprehensive security testing suite with over 100 predefined security tests covering major web application vulnerabilities. These tests are designed to help identify common security issues in web applications.
+
+### Security Test Categories
+
+#### **Input Validation**
+- **SQL Injection Testing**: Database injection vulnerability detection
+- **Cross-Site Scripting (XSS)**: Reflected, stored, and DOM-based XSS
+- **Directory Traversal**: Path traversal and file inclusion vulnerabilities
+
+#### **Authentication & Session Management**
+- **Login Security Testing**: Password policies and account lockout mechanisms
+- **Session Management**: Cookie security and session handling
+- **CSRF Token Validation**: Cross-Site Request Forgery protection
+
+#### **UI Security**
+- **Clickjacking Testing**: Frame protection and UI redressing attacks
+- **Content Security Policy**: CSP header validation and bypass testing
+
+### Using Security Tests
+
+1. **Access Security Testing Interface**
+   - Click the "🛡️ SECURITY TESTS" button in the main control panel
+   - The security testing modal will open with available tests
+
+2. **Configure Target**
+   - Enter the target URL in the "Target URL" field
+   - Ensure the URL includes the protocol (https:// or http://)
+
+3. **Browse and Filter Tests**
+   - **Search**: Use the search box to find specific tests
+   - **Category Filter**: Filter by vulnerability categories
+   - **Severity Filter**: Filter by risk levels (High, Medium, Low)
+
+4. **Execute Security Tests**
+   - Click on a test to expand its details
+   - Review the test description and instructions
+   - Click "🛡️ Execute Security Test" to run the assessment
+   - The test instructions will be automatically loaded into the main execution interface
+
+### Available Security Tests
+
+| Test ID | Summary | Category | Severity |
+|---------|---------|----------|----------|
+| HACK-001 | SQL Injection Testing | Input Validation | High |
+| HACK-002 | Cross-Site Scripting (XSS) Testing | Input Validation | High |
+| HACK-003 | CSRF Token Validation Testing | Authentication & Session Management | Medium |
+| HACK-005 | Authentication and Session Management Testing | Authentication & Session Management | High |
+| HACK-006 | Directory Traversal Testing | Input Validation | High |
+| HACK-014 | Clickjacking Vulnerability Testing | Clickjacking Testing | Medium |
+
+### Security Test Execution
+
+When you execute a security test:
+
+1. **Automatic Configuration**: The target URL and test instructions are automatically configured
+2. **AI-Powered Execution**: The selected AI provider performs the security assessment
+3. **Real-time Monitoring**: Watch the security testing process in real-time
+4. **Detailed Reporting**: Receive comprehensive results including vulnerability findings
+5. **Video Recording**: Optional recording of the security testing session
+
+### Security Testing Best Practices
+
+- **Authorization**: Only test applications you own or have explicit permission to test
+- **Controlled Environment**: Prefer testing in development or staging environments
+- **Documentation**: Keep detailed records of security test results
+- **Remediation**: Address identified vulnerabilities promptly
+- **Regular Testing**: Implement security testing as part of your regular QA process
+
+### Custom Security Tests
+
+You can add custom security tests by creating JSON files in the `backend/hacking/` directory. Follow the existing test format and restart the application to load new tests.
+
+---
+
 ## 📡 API Documentation
 
 ### Authentication
@@ -323,6 +436,73 @@ Response:
 }
 ```
 
+### Security Testing Endpoints
+
+#### Get Available Security Tests
+```http
+GET /hacking/tests
+Authorization: Bearer <token>
+
+Response:
+{
+  "success": true,
+  "tests": [...],
+  "total": 100,
+  "message": "Retrieved 100 security tests",
+  "source": "json_files"
+}
+```
+
+#### Get Specific Security Test
+```http
+GET /hacking/tests/{test_key}
+Authorization: Bearer <token>
+
+Response:
+{
+  "success": true,
+  "test": {
+    "key": "HACK-001",
+    "summary": "SQL Injection Testing",
+    "category": "Input Validation",
+    "severity": "High",
+    "instructions": "..."
+  },
+  "message": "Retrieved security test HACK-001"
+}
+```
+
+#### Execute Security Test
+```http
+POST /hacking/execute-test/{test_key}
+Authorization: Bearer <token>
+
+Response:
+{
+  "success": true,
+  "test_key": "HACK-001",
+  "instructions": "Formatted test instructions...",
+  "test_info": {
+    "summary": "SQL Injection Testing",
+    "category": "Input Validation",
+    "severity": "High"
+  }
+}
+```
+
+#### Reload Security Tests (Admin Only)
+```http
+POST /hacking/reload-tests
+Authorization: Bearer <admin_token>
+
+Response:
+{
+  "success": true,
+  "tests_count": 100,
+  "message": "Successfully reloaded 100 security tests"
+}
+```
+
 ### WebSocket Endpoints
 
 #### Real-time Updates
@@ -356,6 +536,7 @@ const screenshotSocket = new WebSocket('ws://localhost:8000/ws/screenshot/{sessi
 - **JWT**: Token-based authentication
 - **Cryptography**: API key encryption
 - **Browser-use**: AI-powered browser automation
+- **Security Testing Engine**: Vulnerability assessment framework
 - **FFmpeg**: Video processing (optional)
 
 ### Frontend Components
@@ -364,6 +545,7 @@ const screenshotSocket = new WebSocket('ws://localhost:8000/ws/screenshot/{sessi
 - **WebSocket**: Real-time communication
 - **Bootstrap**: UI components and grid system
 - **Matrix Theme**: Custom CSS with retro-futuristic styling
+- **Security Testing Interface**: Dedicated security assessment UI
 
 ### File Structure
 
@@ -379,6 +561,10 @@ qa-remote-browser/
 ├── package.json               # Node.js dependencies
 ├── package-lock.json          # Node.js lock file
 ├── backend/                   # Backend application code
+│   ├── hacking/              # Security test definitions
+│   │   ├── hack-001.json     # SQL Injection tests
+│   │   ├── hack-002.json     # XSS tests
+│   │   └── ...               # Additional security tests
 │   ├── models/               # Data models
 │   │   ├── __init__.py
 │   │   └── schemas.py        # Pydantic schemas
@@ -388,6 +574,7 @@ qa-remote-browser/
 │   │   └── history_routes.py # Execution history routes
 │   ├── routes/               # API route handlers
 │   │   ├── __init__.py
+│   │   ├── hacking_routes.py # Security testing endpoints
 │   │   ├── jira_routes.py    # JIRA integration endpoints
 │   │   ├── session_routes.py # Session management
 │   │   ├── task_routes.py    # Task execution endpoints
@@ -410,6 +597,7 @@ qa-remote-browser/
 │   ├── css/
 │   │   └── matrix-style.css # Matrix-themed styling
 │   └── js/
+│       ├── hacking-manager.js # Security testing frontend
 │       ├── jira-manager.js  # JIRA integration frontend
 │       └── matrix-app.js    # Main application logic
 ├── venv/                    # Python virtual environment
@@ -464,14 +652,17 @@ We welcome contributions from the community! Here's how you can help:
 - **Testing**: Add tests for new features
 - **Documentation**: Update README and docstrings
 - **Commits**: Use conventional commit messages
+- **Security**: Follow secure coding practices for security testing features
 
 ### Areas for Contribution
 
 - 🔧 **New AI Providers**: Add support for additional AI services
+- 🛡️ **Security Tests**: Contribute new vulnerability assessment tests
 - 🎨 **UI Improvements**: Enhance the Matrix-themed interface
 - 📊 **Reporting Features**: Advanced analytics and dashboards
 - 🧪 **Testing Framework**: Unit and integration test coverage
 - 📖 **Documentation**: Tutorials and advanced usage guides
+- 🔒 **Security Enhancements**: Additional security testing capabilities
 
 ---
 
@@ -484,10 +675,12 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - ✅ **Personal Use**: Use for personal projects and learning
 - ✅ **Educational Use**: Use in educational institutions
 - ✅ **Research**: Use for academic and research purposes
+- ✅ **Security Research**: Use for ethical security testing and research
 - ✅ **Modification**: Modify and adapt the code
 - ✅ **Sharing**: Share with others under the same license
 - ❌ **Commercial Use**: Cannot be used for commercial purposes
 - ⚠️ **Attribution**: Must credit the original authors
+- ⚠️ **Responsible Use**: Security testing features must be used ethically and legally
 
 ```
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
@@ -513,11 +706,31 @@ For commercial licensing options, please contact the project maintainers.
 
 ---
 
+## ⚠️ Security Testing Disclaimer
+
+**IMPORTANT**: The security testing features in this application are intended for:
+
+- **Authorized Testing Only**: Only test applications you own or have explicit written permission to test
+- **Educational Purposes**: Learning about web application security vulnerabilities
+- **Development Environment Testing**: Use in controlled development/staging environments
+- **Ethical Security Research**: Responsible disclosure of security vulnerabilities
+
+**DO NOT USE FOR**:
+- Testing applications without proper authorization
+- Malicious attacks or unauthorized penetration testing
+- Illegal activities or unethical hacking
+- Production systems without proper approval
+
+The developers of this tool are not responsible for any misuse or damage caused by inappropriate use of the security testing features. Users are solely responsible for ensuring they have proper authorization before conducting any security tests.
+
+---
+
 ## 🙏 Acknowledgments
 
 - **[Browser-use](https://github.com/browser-use/browser-use)**: Foundation for AI-powered browser automation
 - **[WarmShao](https://github.com/WarmShao)**: Contributor to the browser-use project
 - **FastAPI Community**: For the excellent web framework
+- **OWASP**: For security testing methodologies and best practices
 - **Matrix Franchise**: Inspiration for the iconic green-on-black aesthetic
 
 ---
@@ -527,14 +740,15 @@ For commercial licensing options, please contact the project maintainers.
 - **Issues**: [GitHub Issues](https://github.com/yourusername/qa-remote-browser/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/qa-remote-browser/discussions)
 - **Documentation**: [Wiki](https://github.com/yourusername/qa-remote-browser/wiki)
+- **Security Reports**: Please report security vulnerabilities responsibly through private channels
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for the QA Community**
+**Made with ❤️ for the QA and Security Community**
 
-*Follow the white rabbit... into automated testing excellence.*
+*Follow the white rabbit... into automated testing and security excellence.*
 
 [![Stars](https://img.shields.io/github/stars/yourusername/qa-remote-browser?style=social)](https://github.com/yourusername/qa-remote-browser/stargazers)
 [![Forks](https://img.shields.io/github/forks/yourusername/qa-remote-browser?style=social)](https://github.com/yourusername/qa-remote-browser/network/members)
