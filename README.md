@@ -3,7 +3,8 @@
 <div align="center">
 
 <!-- Logo placeholder - Replace with your hosted logo -->
-<img src="https://raw.githubusercontent.com/yourusername/qa-remote-browser/main/frontend/assets/matrix-qa-logo.png" alt="Matrix QA Test Runner Logo" width="200" height="200">
+![logo](https://github.com/user-attachments/assets/a6dfe1bd-fe1f-4c3e-84c7-e422430e094a)
+
 
 <!-- Alternative: Use a simple text-based logo -->
 <!--
