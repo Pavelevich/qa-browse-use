@@ -3,7 +3,7 @@
 <div align="center">
 
 <!-- Logo placeholder - Replace with your hosted logo -->
-![logo](https://github.com/user-attachments/assets/a6dfe1bd-fe1f-4c3e-84c7-e422430e094a)
+<img src="https://github.com/user-attachments/assets/a6dfe1bd-fe1f-4c3e-84c7-e422430e094a" alt="logo" width="150"/>
 
 
 <!-- Alternative: Use a simple text-based logo -->
