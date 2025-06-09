@@ -14,7 +14,7 @@
 </div>
 -->
 
-![Matrix QA Test Runner](https://img.shields.io/badge/Matrix-QA%20Test%20Runner-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00)
+![Matrix QA Test Runner](https://tooncraftai.com/%20Test%20Runner-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00)
 
 <p align="center">
   <a href="https://fastapi.tiangolo.com" target="_blank"><img src="https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=00FF00" alt="FastAPI"></a>
